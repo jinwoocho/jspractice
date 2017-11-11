@@ -17,11 +17,9 @@ function sortDataType(){
     for(var i = 0; i < myArray.length; i++){
         if(typeof myArray[i] === 'string'){
             stringArray.push(myArray[i]);
-        }
-        if(typeof myArray[i] === 'number'){
+        } else if(typeof myArray[i] === 'number'){
             numberArray.push(myArray[i])
-        }
-        if(typeof myArray[i] === 'boolean'){
+        } else if(typeof myArray[i] === 'boolean'){
             booleanArray.push(myArray[i])
         }
     }
