@@ -39,10 +39,26 @@ function palindrome(str){
 
 palindrome('race car');
 
+/////
+//11_14 works but.... the code is stupid
+function palindrome(str){
+    str = str.toLowerCase();
+    str = str.replace(/\s/g,'');
+    str = str.split('_').join('');
+    str = str.split(',').join('');
+    str = str.split('.').join('');
+    str = str.split('/').join('');
+    str = str.split('-').join('');
+    str = str.split(')').join('');
+    str = str.split('(').join('');
+    console.log(str)
+    var newstr = str.split("").reverse().join('');
 
-// function world(str){
-//   var hoi = str.split("");
-//   console.log(hoi)
-// }
+    if( str === newstr){
+        return true;
+    } else {
+        return false;
+    }
+}
 
-// world('a ds s df');
+palindrome('race car');
