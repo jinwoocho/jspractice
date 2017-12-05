@@ -15,12 +15,18 @@
 //            findLongestWord(“Google do a barrel roll”) should return 6.
 
 var arr = [];
-
+var Max_num;
 function findLongestWord(str) {
     var splitstr = str.split(" ");
-    arr = splitstr.push();
-    console.log(arr);
-    return str.length;
-
+    // console.log(splitstr);
+    for(var i = 0; i < splitstr.length; i++){
+        // console.log(splitstr[i].length);
+        arr.push(splitstr[i].length);
+        Max_num = Math.max.apply(Math, arr);
+    }
+    // console.log(arr);
+    // console.log(Max_num);
+    // return str.length;
+    return Max_num;
 }
 findLongestWord("The quick brown fox jumped over the lazy dog");

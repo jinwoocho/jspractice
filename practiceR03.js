@@ -51,7 +51,7 @@ function palindrome(str){
     str = str.split('-').join('');
     str = str.split(')').join('');
     str = str.split('(').join('');
-    console.log(str)
+    console.log(str);
     var newstr = str.split("").reverse().join('');
 
     if( str === newstr){
